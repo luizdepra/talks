@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>go-rest-api: Sua primeira REST API em Go</title>
+    <title>go-rest-api: REST APIs em Go</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -26,7 +26,7 @@
       <div class="slides">
         <section>
           <h1>go-rest-api</h1>
-          <h3>Sua primeira REST API em Go</h3>
+          <h3>REST APIs em Go</h3>
         </section>
         <section>
           <h2>Quem é esse cara?</h2>
@@ -37,7 +37,7 @@
           </p>
           <ul>
             <li>BCC & GameDev</li>
-            <li>Python, C/C++, Go & Rust</li>
+            <li>Python, Go & Rust</li>
             <li>Jogos Eletrônicos, Cartas e Tabuleiro</li>
             <li>Futuro marceneiro</li>
             <li>Também não gosto de Java</li>
@@ -54,7 +54,7 @@
             <li>Dependências mínimas</li>
             <li>Acesso a banco de dados</li>
           </ul>
-          <p>Mas não são...</p>
+          <p>Mas não são objetivos...</p>
           <ul>
             <li>Template para APIs</li>
             <li>Gerenciamento de Dependências (dep ou vgo)</li>
@@ -68,7 +68,7 @@
           </p>
         </section>
         <section>
-          <h2>Recursos</h2>
+          <h2>Operações</h2>
           <ul>
             <li><i>GET /tasks/</i> - Listar Tasks</li>
             <li><i>POST /tasks/</i> - Criar Task</li>
@@ -90,33 +90,56 @@
         </section>
         <section>
           <h1>Implementação</h1>
+        </section>
+        <section>
+          <h2>Dependências</h2>
+          <pre><code data-trim>
+Go 1.11+
+Go Module (vgo)
+sqlite3 cli tool
+          </code></pre>
+          <h2>Packages</h2>
+          <pre><code data-trim>
+github.com/go-playground/pure
+github.com/mattn/go-sqlite3
+          </code></pre>
+        </section>
+        <section>
           <h2>Hello World</h2>
           <p>
             <a href="https://github.com/luizdepra/go-rest-api/tree/01-hello-world">https://github.com/luizdepra/go-rest-api/tree/01-hello-world</a>
           </p>
         </section>
         <section>
-          <h2>Hello World</h2>
-          <h4>main.go</h4>
-          <pre><code class="go" data-trim>
-package main
-
-import (
-  "fmt"
-  "log"
-  "net/http"
-)
-
-func main() {
-  http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello world!")
-  })
-
-  log.Fatal(http.ListenAndServe(":8000", nil))
-}
-          </code></pre>
+          <h2>Routes</h2>
+          <p>
+            <a href="https://github.com/luizdepra/go-rest-api/tree/02-routes">https://github.com/luizdepra/go-rest-api/tree/02-routes</a>
+          </p>
         </section>
-        <section></section>
+        <section>
+          <h2>Models</h2>
+          <p>
+            <a href="https://github.com/luizdepra/go-rest-api/tree/03-models">https://github.com/luizdepra/go-rest-api/tree/03-models</a>
+          </p>
+        </section>
+        <section>
+          <h2>Database</h2>
+          <p>
+            <a href="https://github.com/luizdepra/go-rest-api/tree/04-database">https://github.com/luizdepra/go-rest-api/tree/04-database</a>
+          </p>
+        </section>
+        <section>
+          <h2>Logging</h2>
+          <p>
+            <a href="https://github.com/luizdepra/go-rest-api/tree/05-logging">https://github.com/luizdepra/go-rest-api/tree/05-logging</a>
+          </p>
+        </section>
+        <section>
+          <h1>Obrigado!</h1>
+          <p>
+            <a href="https://github.com/luizdepra/go-rest-api/">https://github.com/luizdepra/go-rest-api</a>
+          </p>
+        </section>
       </div>
     </div>
 
